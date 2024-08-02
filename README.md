@@ -21,10 +21,13 @@
 ## 安装及生成数据路径：
     ├── seata-server 
         ├── images                      镜像文件文件目录
-        ├── db                          数据库容器挂载目录
-            ├── conf                        配置文件目录
-            ├── data                        数据目录
-            └── log                         日志目录
+        ├── db                          数据库目录
+            ├── initdb.d                    初始化脚本文件目录
+                └── init.sql                    初始化脚本
+            └── mysql                       数据库容器挂载目录
+                ├── conf                        配置文件目录
+                ├── data                        数据目录
+                └── log                         日志目录
         ├── seata-server                应用容器挂载目录
             └── resources                   配置文件目录
         ├── docker-compose.yml          docker-compose.yml
