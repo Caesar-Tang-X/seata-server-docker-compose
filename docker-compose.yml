@@ -28,8 +28,7 @@ services:
       - SEATA_IP=192.168.101.106
       - SEATA_PORT=8091
     volumes:
-      - "/usr/share/zoneinfo/Asia/Shanghai:/etc/localtime" # 设置系统时区
-      - "/usr/share/zoneinfo/Asia/Shanghai:/etc/timezone"  # 设置时区
+      - TZ=Asia/Shanghai
       # https://seata.apache.org/zh-cn/docs/ops/deploy-by-docker-compose/
       - "./seata-server/resources:/seata-server/resources"
     ports:
